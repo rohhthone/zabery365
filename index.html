@@ -1,7 +1,556 @@
 <html>
     <head>
         <title>Вывоз мусора в Санкт-Петербурге | Заберу365</title>
-        <meta name="description" content="Услуги по вывозу мусора в Санкт-Петербурге. ">
+        <meta name="description" content="Услуги по вывозу мусора в Санкт-Петербурге и Ленинградской области. Быстрая утилизация мусора специалистами. Заберу365 - помогаем заботиться об экологии! ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta name="keywords" content="вывоз, мусора, спб, ло, бесплатно, платно, санкт-петербург, ленинградская область">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
-    <h1>Вывоз мусора в Санкт-Петербурге</h1>
+    <style>
+        div.landing{background: linear-gradient(to bottom, #BBFF20, #E7AC16)}
+        #free:hover #free-menu, #paid:hover #paid-menu{display: flex;}
+        #free-menu, #paid-menu{display: none; position:fixed; top:88px; background-color: white; flex-direction: column; padding: 1.3vmax; padding-top: 0;}
+        .phone{display: none;}
+
+        @media screen and (max-width: 50vh) {
+            .phone{display: flex;}
+            .desktop{display: none;}
+        }
+
+        *{margin: 0; padding: 0;}
+        html{font-family: montserrat; font-size: 1.3vmax; display: flex; flex-direction: column; align-items: center;}
+        body{display: flex; align-items:center; justify-content:space-around; flex-direction: column;}
+        body, body>div{width: 100%;}
+        header{display: flex;flex-direction: row; justify-content: space-between;}
+        body>div,footer{display: flex; flex-direction: column; align-items: center;}
+        h1{font-size: 4vmax;}
+        h2{font-size: 3vmax;}
+        h3{font-size: 2vmax;font-weight: 600;}
+        .divide{background-color: rgba(0, 0, 0, 0.4);}
+        a:any-link{text-decoration: none; color:inherit}
+        a:hover{text-decoration: underline;}
+
+        
+
+        header>.logo{display: flex;flex-direction: row; width: 36vw; height: 88px; align-items: center;}
+        header>.logo>img{width: 66px; height: 66px;}
+        header>.logo>div{display: flex;flex-direction: column;align-items:flex-start;justify-content: center; margin-left: 4px;}
+        header>.logo>div>div{border-top: 1px solid rgba(0, 0, 0, 0.4); margin: 2px; font-weight: 500; color: rgba(0, 0, 0, 0.6);}
+
+        header>.menu{display: flex;flex-direction: column; width: 54vw; height: 88px;}
+        header>.menu>.contact{display: flex;flex-direction: row; height: 40%; align-items: center; justify-content:space-between;}
+        header>.menu>.nav{display: flex;flex-direction: row; height: 60%; align-items: center;justify-content:space-between;}
+        header>.menu>.nav #free, #paid{height: 100%; align-items: center; justify-content: space-around; display: flex; cursor: pointer;}
+        header>.menu>.nav>.divide{width: 1px; height: 1.5vmax;}
+
+        .landing{width: 100%;}
+        .landing>div{display: flex; flex-direction: row; height: 62vh;justify-content: center; align-items: center;}
+        .landing>div>div{width: 54vw; height: 60%; display: flex; align-items: center; flex-direction: column; justify-content: center;}
+        .landing>div>div>.divide{width: 100%; height: 1px; margin: 11px;}
+        .landing>div>img{width: 36vw; height:fit-content;}
+
+        .info{display: flex; justify-content: center;}
+        .info>div{width: 54vw;height: 100%; display: flex; flex-direction: column; justify-content: center;}
+        .info>div>.divide{width:62%; height: 1px; margin-top: 10px;}
+        .info>div>div{width: 62%;}
+        .info>div>h2{margin-bottom: 44px;}
+        .info> img{width:36vw;height: fit-content;}
+
+        .list{width: 90vw; display: flex; flex-direction: column;justify-content: center; margin-top: 88px;}
+        .list>.divide{height: 1px; margin-top: 22px; width: 38%;}
+        .list>.description{width: 38%; color: rgba(0, 0, 0, 0.6);}
+        .list>.service{display: flex; flex-direction: column; }
+        .list>.service>div{display: flex; flex-wrap: wrap;margin-top: 44px;}
+        .list>.service>.divide{height: 1px;}
+        .list>.service>div>div{display: flex;flex-direction: column; width: 28vw; align-items: center; height: 38vh; justify-content: space-between;}
+        .list>.service>div>div>h3{text-align: center;}
+        .list>.service>div>div>div{width: 80%;}
+        .list>.service>div>div>img{width:88px}
+
+        .about{width: 90vw; display: flex; flex-direction: column; margin-top: 88px;}
+        .about>div{display: flex;justify-content: space-between; margin-top: 44px;}
+        .about>div>.divide{width: 1px;}
+        .about>div>div{width: 30%;}
+        .about>div>div>h2{text-align: center; margin-bottom: 22px;}
+
+        .review{width: 90vw; display: flex; flex-direction: column; margin-top: 88px;}
+        .review>.divide{height: 1px;}
+        .review>div{display: flex; align-items: center;}
+        .review>div>div>div{padding: 11px;}
+        .review>div>img{width: 88px; margin: 44px;}
+        .review>div>a{width:100%;text-align: center; margin: 22px;}
+
+        .faq{width: 90vw; display: flex; flex-direction: column; margin-top: 88px;}
+        .faq>div{margin-top: 44px;}
+        .faq>div>h3{margin-bottom: 11px;}
+
+        footer{width: 100%; margin-top: 88px; display: flex; align-items: center; justify-content: center;}
+        footer>div{width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; margin: 22px;}
+        footer>div> div> a{margin: 22px;}
+        footer>div> div{  display: flex; align-items: center; justify-content: center; }
+
+        .♥1 {width: 100%; background-color: #000; display: flex; align-items: center; justify-content: center; color: #fff; height: 44px;}
+        .♥1>span{margin-left: 11px;}
+
+
+    </style>
+    <body>
+        <header class="phone">
+            <div class="logo">
+                <img src="logotype.png" alt="Logotype zabery365">
+                <div>
+                    <h3>заберу365</h3>
+                    <div>вывоз и утилизация</div>
+                </div>
+            </div>
+            <style>.d{fill:#000;}  #mobile_burger.burger_cross #burger_middle_line{transition: 0.5s; opacity: 0;} #mobile_burger.burger_cross #burger_top_line{transition: 0.5s; transform: rotate(45deg) translate(4px,-17px);}
+                #mobile_burger.burger_cross #burger_bottom_line{transition: 0.5s; transform: rotate(135deg) translate(-10px,-14px);} #mobile_burger.burger_cross ~ #mobile_menu{display:flex;} #mobile_burger.burger ~ #mobile_menu{display:none;} #mobile_burger.burger #burger_middle_line{transition: 0.5s; opacity: 1;} #mobile_burger.burger #burger_top_line{transition: 0.5s; transform: rotate(0) translate(0);}
+                #mobile_burger.burger #burger_bottom_line{transition: 0.5s; transform: rotate(0) translate(0);}
+            </style>
+            <div class="menu burger" id="mobile_burger" style="align-items: flex-end; justify-content: space-around;">
+                <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17" style="width: 44px;"><defs></defs><g id="a"/><g id="b"><g id="c"><g><rect id="burger_top_line" class="d" y="14.94" width="19" height="1.75" rx=".5" ry=".5"/><rect class="d" id="burger_middle_line" y="7.47" width="19" height="1.75" rx=".5" ry=".5"/><rect id="burger_bottom_line" class="d" width="19" height="1.75" rx=".5" ry=".5"/></g></g></g></svg>
+            </div>
+            <div id="mobile_menu" style="position: fixed; width: 100%;top: 88px; height:100%; right: 0; flex-direction: column; align-items: flex-start;  background-color: #fff; font-size: 2vmax;">
+            <div class="contact" style=" margin: 22px;"><a href="tel:+78129930163">Нажмите +7 812 993 01 63</a><div>Работаем без выходных с 10:00 до 23:00</div></div>
+            <div class="nav" style="display: flex; flex-direction: column; margin: 11px;">
+                <style>a{margin-top: 2px;}</style>
+                <div id="free" style="display: flex; flex-direction:column; align-items:flex-start">
+                        <a href="https://zabery365.ru/vyvoz-vann">вывоз ванн</a>
+                        <a href="https://zabery365.ru/vyvoz-batarey">вывоз батарей</a>
+                        <a href="https://zabery365.ru/vyvoz-metallicheskih-dverey">вывоз металлических дверей</a>
+                        <a href="https://zabery365.ru/vyvoz-holodilnikov">вывоз холодильников</a>
+                        <a href="https://zabery365.ru/vyvoz-stiralnyh-mashin">вывоз стиральных машин</a>
+                        <a href="https://zabery365.ru/besplatnyy-demontazh-metallokonstrukciy-s-vyvozom-na-utilizaciyu-spb-i-lenoblast">вывоз металлоконструкций</a>
+                        <a href="https://zabery365.ru/content/vyvoz-makulatury-po-spb-i-oblasti">вывоз макулатуры</a>
+                        <a href="https://zabery365.ru/vyvoz-posudomoek">вывоз посудомоечных машин</a>
+                        <a href="https://zabery365.ru/utilizaciya-bitovoy-tehniki">вывоз бытовой техники</a>
+                </div><div class="divide" style="height: 1px;margin: 11px"></div>
+                <div id="paid" style="display: flex; flex-direction:column; align-items:flex-start">
+                        <a href="https://zabery365.ru/content/vyvoz-staroy-mebeli-v-spb">вывоз мебели</a>
+                        <a href="https://zabery365.ru/content/vyvoz-stroitelnogo-musora-spb-i-leningradskaya-oblast">вывоз строительного мусора</a>
+                        <a href="https://zabery365.ru/vyvoz-pianino-v-sankt-peterburge-i-oblasti">вывоз пианино</a>
+                        <a href="https://zabery365.ru/content/pereezd-po-sankt-peterburgu-i-len-oblasti">квартирный переезд</a>
+                        <a href="https://zabery365.ru/dacha-moving">дачный переезд</a>
+                        <a href="https://zabery365.ru/perevozka-gruzov-na-bolshie-rasstoyaniya-iz-pitera">перевозка грузов</a>
+                        <a href="https://zabery365.ru/content/perevozka-stroy-materialov-po-sankt-peterburgu-i-len-oblasti">перевозка стройматериалов</a>
+                        <a href="https://zabery365.ru/vyvoz-starogo-divana">вывоз дивана</a>
+                        <a href="https://zabery365.ru/vyvoz-ram-i-okon">вывоз окон</a>
+                        <a href="https://zabery365.ru/vyvoz-gazovih-plit">вывоз плит</a>
+                </div><div class="divide" style="height: 1px;margin: 11px"></div>
+                <a href="https://zabery365.ru/info">Условия вывоза</a><div class="divide" style="height: 1px;margin: 11px"></div>
+                <a href="https://zabery365.ru/about">О нас</a><div class="divide" style="height: 1px;margin: 11px"></div>
+                <a href="https://zabery365.ru/reviews">Отзывы</a><div class="divide" style="height: 1px;margin: 11px"></div>
+                <a href="https://zabery365.ru/contacts">Контакты</a></div>
+            </div>
+            <script>
+                document.getElementById("mobile_burger").onclick=function(){console.log('hi, check rohhthone.com');document.getElementById("mobile_burger").classList.toggle("burger_cross");document.getElementById("mobile_burger").classList.toggle("burger");}
+                
+            </script>
+        </header>
+        <div class="phone">
+            <div class="landing">
+                <div style="background-image: url(template.png) ;background-position: center;background-repeat: no-repeat;background-size: cover; width: 100%;">
+                <div>
+                    <h1>Вывозим мусор в <br> Санкт-Петербурге и Ленинградкой области</h1>
+                    <div class="divide"></div>
+                    <div>Вывозим ванны, двери металлические, батареи, диваны, плиты и прочую мебель совершенно бесплатно.</div>
+                </div>
+                <img src="landing.png" alt="The our service of cleaning up inside outlined polygon">
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <h2>Об утилизации мусора</h2>
+                    
+                    <div style="font-weight: 500;">Специалисты нашей компании, быстро приедут, произведут работы и избавят Вас от хлопот. Мы предоставим все необходимое.</div>
+                    <div class="divide"></div>
+                    <div style="color: rgba(0,0,0,0.6)">Наши сервисы работают с крупнейшими организациями по сбору и переработке мусора. Наша команда специалистов делают все возможное, чтобы Вы остались довольны после наших работ.</div>
+                </div>
+                <img src="recycling_bin.png" alt="The image of 3D recycled bin">
+            </div>
+            <div class="list">
+                <h2>Бесплатный вывоз</h2>
+                <div class="divide"></div>
+                <div class="description">Утилизация ванн, батарей, металлических дверей, холодильников, металлоконструкций совершенно бесплатно</div>
+                <div class="service">
+                    <div>
+                        <div>
+                            <h3>Вывоз ванн</h3>
+                            <img src="icon_bath.svg" alt="Bath icon">
+                            <div>Самостоятельно выносить ванну очень сложно, доверьте это занятие профессионально.<br><a href="https://zabery365.ru/vyvoz-vann">Подробнее ...</a></div>
+                        </div>
+                        <div>
+                            <h3>Вывоз батарей</h3>
+                            <img src="icon_radiator.svg" alt="Radiator icon">
+                            <div>Батарея тяжелый предмет который сложно демонтировать. Не утруждайтесь, мы сможем это сделать бесплатно.<br><a href="https://zabery365.ru/vyvoz-batarey">Подробнее ...</a></div>
+                        </div>
+                        <div>
+                            <h3>Вывоз металлических дверей</h3>
+                            <img src="icon_door.svg" alt="Door icon">
+                            <div>Высококвалифицированный персонал нашей компании, демонтирует и утилизирует все совершенно бесплатно.<br><a href="https://zabery365.ru/vyvoz-metallicheskih-dverey">Подробнее ...</a></div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <div>
+                        <div>
+                            <h3>Вывоз холодильников</h3>
+                            <img src="icon_refrigerator.svg" alt="Refrigerator icon">
+                            <div>Холодильник очень важно грамотно утилизировать. Мы знаем как это сделать. Обращайтесь и забудте о лишних заботах.<br><a href="https://zabery365.ru/vyvoz-holodilnikov">Подробнее ...</a></div>
+                        </div>
+                        <div>
+                            <h3>Вывоз стиральных машин</h3>
+                            <img src="icon_washingmachine.svg" alt="Washing machine icon">
+                            <div>Стиральная машина очень не удобная, чтобы поднять самому. Наша команда решит все проблемы за Вас.<br><a href="https://zabery365.ru/vyvoz-stiralnyh-mashin">Подробнее ...</a></div>
+                        </div>
+                        <div>
+                            <h3>Вывоз металлоконструкций</h3>
+                            <img src="icon_structure.svg" alt="Metal structure icon">
+                            <div>Разбирать металлоконструкции сложная работа для настоящих профессионалов. Нужно быть действительно выносливыми и иметь специальные инструменты для демонтажа.<br><a href="https://zabery365.ru/besplatnyy-demontazh-metallokonstrukciy-s-vyvozom-na-utilizaciyu-spb-i-lenoblast">Подробнее ...</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <h2>Платный вывоз</h2>
+                <div class="divide"></div>
+                <div class="description">Услуга включает в себя подачу транспорта, спуск, погрузку, транспортировку, разгрузку, подъем.</div>
+                <div class="service">
+                    <div>
+                        <div>
+                            <h3>Вывоз мебели</h3>
+                            <img src="icon_furniture.svg" alt="Furniture icon">
+                            <div>Сервис предоставляет полный комплекс услуг по утилизации старой мебели, квалифицированными специалистами.<br><a href="https://zabery365.ru/content/vyvoz-staroy-mebeli-v-spb">Подробнее ...</a></div>
+                         </div>
+                        <div>
+                            <h3>Вывоз строительного мусора</h3>
+                            <img src="icon_build.svg" alt="Build icon">
+                            <div>Мы приедем и утилизируем стоительный мусор за вас. Наши специалисты возьмут всю работу на себя.<br><a href="https://zabery365.ru/content/vyvoz-stroitelnogo-musora-spb-i-leningradskaya-oblast">Подробнее ...</a></div>
+                        </div>
+                        <div>
+                            <h3>Вывоз пианино</h3>
+                            <img src="icon_piano.svg" alt="Piano icon">
+                            <div>Фортепьяно очень тяжелый и крупный предмет, в его утилизации нужно быть предельно аккуратным, как наши грузчики.<br><a href="https://zabery365.ru/vyvoz-pianino-v-sankt-peterburge-i-oblasti">Подробнее ...</a></div>
+                        </div>
+                    </div>
+                <div class="divide"></div>
+                <div>
+                    <div>
+                        <h3>Квартирный переезд</h3>
+                        <img src="icon_transport.svg" alt="Transport icon">
+                        <div>Профессионально и быстро доставим ваши товары на новый адрес.<br><a href="https://zabery365.ru/content/pereezd-po-sankt-peterburgu-i-len-oblasti">Подробнее ...</a></div>
+                    </div>
+                    <div>
+                        <h3>Дачный переезд</h3>
+                        <img src="icon_villagetransport.svg" alt="Village transport icon">
+                        <div>За городом все хотят расслабиться и побыстрее забыть о проблемах. Доверьте это нашим профессионалам.<br><a href="https://zabery365.ru/dacha-moving">Подробнее ...</a></div>
+                    </div>
+                    <div>
+                        <h3>Перевозка грузов</h3>
+                        <img src="icon_truck.svg" alt="Truck icon">
+                        <div>Когда нужно доставить груз, важно ничего не повредить. Наши обученные работники профессионально справятся с этой задачей.<br><a href="https://zabery365.ru/perevozka-gruzov-na-bolshie-rasstoyaniya-iz-pitera">Подробнее ...</a></div>
+                    </div>
+                </div>
+                <div class="divide"></div>
+                <div>
+                    <div>
+                        <h3>Перевозка строительных материалов</h3>
+                        <img src="icon_buildertruck.svg" alt="Builder truck icon">
+                        <div>Стройка это очень важное дело, что требует ответственного подхода во всех процессах. Положитесь на нас.<br><a href="https://zabery365.ru/content/perevozka-stroy-materialov-po-sankt-peterburgu-i-len-oblasti">Подробнее ...</a></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="about">
+                <h2>Вывоз мусора в Санкт-Петербурге</h2>
+                <div>
+                    <div>
+                        <h2>Заберу 365</h2>Компания из Санкт-Петербурга которая занимается утилизацией профессионально. С собственным парком специальной техники и квалифицированной командой профессионалов. Партнерские отношения с крупнейшими компаниями создают крупную систему, что может решить большую часть проблем экологии.
+                    </div>
+                    <div class="divide"></div>
+                    <div>
+                        <h2>Помощь</h2>Многие вещи занимают наше лишнее время и нам приходиться загружать себя лишними проблемами. Мы помогаем людям упростить жизнь и сохранить свое время. Чтобы решить Вашу проблему у нас есть все необходимое, чтобы сделать это быстро и качественно.
+                    </div>
+                    <div class="divide"></div>
+                    <div>
+                        <h2>Экология</h2>Мусор занимает большую часть глобальных проблем. Качественная его утилизация позволяет сделать мир чуточку чище. Решение проблемы нашей компанией дают вам возможность показать ответственность за то, что происходит в мире и вокруг Вас.
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <h2>Отзывы</h2>
+                <div>
+                    <img src="user.png" alt="User 1">
+                    <div>
+                        <div>Отличное взаимодействие с клиентом. Ответственный вывоз мусора от компании. Спасибо!</div>
+                        <div>13.09.2022 Rohh Thone</div>
+                    </div>
+                </div>
+                <div class="divide"></div>
+                <div>
+                    <img src="user2.png" alt="User 2">
+                    <div>
+                        <div>Спасибо за помощь. Хорошо когда есть такие фирмы. Вывозили старый диван. Позвонили, и на следующий день вывезли. Оперативно, аккуратно, не дорого вывезли мусор.</div>
+                        <div>28.07.2018 Ольга Питерская</div>
+                    </div>
+                </div>
+                <div class="divide"></div>
+                <div>
+                    <img src="user3.png" alt="User 3">
+                    <div>
+                        <div>Огромное спасибо за помощь!Быстро,без лишних слов и совсем недорого.</div>
+                        <div>28.06.2018 Наталья Смирнова</div>
+                    </div>
+                </div>
+                <div class="divide"></div>
+                <div><a href="https://zabery365.ru/reviews">Больше отзывов ...</a></div>
+            </div>
+            <div class="faq">
+                <h2>FAQ</h2>
+                <div>
+                    <h3>Как оформить вывоз мусора?</h3>Оформить заявку на вывоз мусора можно позвонив по телефону +7 812 993 01 63
+                </div>
+                <div>
+                    <h3>Какой мусор лучше не выбрасывать?</h3>Обычный мусоропровод предназначен лишь для каких то бытовых отходов.  В некоторых районах Санкт-Петербурга оборудованы специальные контейнеры для сбора раздельного мусора, но чтобы в этом всем разобраться нужно много времени. Доверьте эту работу профессионалам, кто занимается этим уже много времени.
+                </div>
+                <div>
+                    <h3>Куда вывозят мусор?</h3>В зависимости от вида и класса опасности мусор отвозят или на мусоросортировочный завод, полигон или в сортировочный центр к партнерам компании «Заберу365»
+                </div>
+            </div>
+        </div>
+        <footer class="phone">
+            <div>
+                <a href="tel:+78129930163">+7 812 993 01 63</a>
+                <div>Искровский пр., 19, корп. 1, Санкт-Петербург, 193168</div>
+                <div><span>© 2022 Заберу365</span><a href="https://zabery365.ru/sitemap/">Карта сайта</a><a href="https://vk.com/zabery365"><img src="vk.svg" alt="vk logo"></a><a href="https://yandex.ru/maps/org/zaberu_365_vyvoz_i_utilizatsiya_musora/186892885468/"><img src="ya.svg" alt="Yandex logo"></a><a href="https://www.google.com/maps/place/%D0%97%D0%B0%D0%B1%D0%B5%D1%80%D1%83365,+%D0%98%D1%81%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80.,+19,+%D0%BA%D0%BE%D1%80%D0%BF.+1,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+193168/@59.904126,30.467466,15z/data=!4m5!3m4!1s0x46962f6d49746949:0x8c114e3185aca5f9!8m2!3d59.904126!4d30.467466"><img src="goo.svg" alt="Google logo"></a></div>
+            </div>
+            
+        </footer>
+        <header class="desktop">
+            <div class="logo">
+                <img src="logotype.png" alt="Logotype zabery365">
+                <div>
+                    <h3>заберу365</h3>
+                    <div>вывоз и утилизация</div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="contact"><div>+7 812 993 01 63</div><div>Работаем без выходных с 10:00 до 23:00</div></div>
+                <div class="nav">
+                    <div id="free">Бесплатный вывоз 
+                        <div id="free-menu">
+                            <a href="https://zabery365.ru/vyvoz-vann">вывоз ванн</a>
+                            <a href="https://zabery365.ru/vyvoz-batarey">вывоз батарей</a>
+                            <a href="https://zabery365.ru/vyvoz-metallicheskih-dverey">вывоз металлических дверей</a>
+                            <a href="https://zabery365.ru/vyvoz-holodilnikov">вывоз холодильников</a>
+                            <a href="https://zabery365.ru/vyvoz-stiralnyh-mashin">вывоз стиральных машин</a>
+                            <a href="https://zabery365.ru/besplatnyy-demontazh-metallokonstrukciy-s-vyvozom-na-utilizaciyu-spb-i-lenoblast">вывоз металлоконструкций</a>
+                            <a href="https://zabery365.ru/content/vyvoz-makulatury-po-spb-i-oblasti">вывоз макулатуры</a>
+                            <a href="https://zabery365.ru/vyvoz-posudomoek">вывоз посудомоечных машин</a>
+                            <a href="https://zabery365.ru/utilizaciya-bitovoy-tehniki">вывоз бытовой техники</a>
+                        </div>
+                    </div><div class="divide"></div>
+                    <div id="paid">Платный вывоз
+                        <div id="paid-menu">
+                            <a href="https://zabery365.ru/content/vyvoz-staroy-mebeli-v-spb">вывоз мебели</a>
+                            <a href="https://zabery365.ru/content/vyvoz-stroitelnogo-musora-spb-i-leningradskaya-oblast">вывоз строительного мусора</a>
+                            <a href="https://zabery365.ru/vyvoz-pianino-v-sankt-peterburge-i-oblasti">вывоз пианино</a>
+                            <a href="https://zabery365.ru/content/pereezd-po-sankt-peterburgu-i-len-oblasti">квартирный переезд</a>
+                            <a href="https://zabery365.ru/dacha-moving">дачный переезд</a>
+                            <a href="https://zabery365.ru/perevozka-gruzov-na-bolshie-rasstoyaniya-iz-pitera">перевозка грузов</a>
+                            <a href="https://zabery365.ru/content/perevozka-stroy-materialov-po-sankt-peterburgu-i-len-oblasti">перевозка стройматериалов</a>
+                            <a href="https://zabery365.ru/vyvoz-starogo-divana">вывоз дивана</a>
+                            <a href="https://zabery365.ru/vyvoz-ram-i-okon">вывоз окон</a>
+                            <a href="https://zabery365.ru/vyvoz-gazovih-plit">вывоз плит</a>
+                        </div>
+                    </div><div class="divide"></div>
+                    <a href="https://zabery365.ru/info">Условия вывоза</a><div class="divide"></div>
+                    <a href="https://zabery365.ru/about">О нас</a><div class="divide"></div>
+                    <a href="https://zabery365.ru/reviews">Отзывы</a><div class="divide"></div>
+                    <a href="https://zabery365.ru/contacts">Контакты</a></div>
+            </div>
+        </header>
+        <div class="desktop">
+            <div class="landing">
+                <div style="background-image: url(template.png) ;background-position: center;background-repeat: no-repeat;background-size: cover; width: 100%;">
+                <div>
+                    <h1>Вывозим мусор в <br> Санкт-Петербурге и Ленинградкой области</h1>
+                    <div class="divide"></div>
+                    <div>Вывозим ванны, двери металлические, батареи, диваны, плиты и прочую мебель совершенно бесплатно.</div>
+                </div>
+                <img src="landing.png" alt="The our service of cleaning up inside outlined polygon">
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <h2>Об утилизации мусора</h2>
+                    
+                    <div style="font-weight: 500;">Специалисты нашей компании, быстро приедут, произведут работы и избавят Вас от хлопот. Мы предоставим все необходимое.</div>
+                    <div class="divide"></div>
+                    <div style="color: rgba(0,0,0,0.6)">Наши сервисы работают с крупнейшими организациями по сбору и переработке мусора. Наша команда специалистов делают все возможное, чтобы Вы остались довольны после наших работ.</div>
+                </div>
+                <img src="recycling_bin.png" alt="The image of 3D recycled bin">
+            </div>
+            <div class="list">
+                <h2>Бесплатный вывоз</h2>
+                <div class="divide"></div>
+                <div class="description">Утилизация ванн, батарей, металлических дверей, холодильников, металлоконструкций совершенно бесплатно</div>
+                <div class="service">
+                    <div>
+                        <div>
+                            <h3>Вывоз ванн</h3>
+                            <img src="icon_bath.svg" alt="Bath icon">
+                            <div>Самостоятельно выносить ванну очень сложно, доверьте это занятие профессионально.<br><a href="https://zabery365.ru/vyvoz-vann">Подробнее ...</a></div>
+                        </div>
+                        <div>
+                            <h3>Вывоз батарей</h3>
+                            <img src="icon_radiator.svg" alt="Radiator icon">
+                            <div>Батарея тяжелый предмет который сложно демонтировать. Не утруждайтесь, мы сможем это сделать бесплатно.<br><a href="https://zabery365.ru/vyvoz-batarey">Подробнее ...</a></div>
+                        </div>
+                        <div>
+                            <h3>Вывоз металлических дверей</h3>
+                            <img src="icon_door.svg" alt="Door icon">
+                            <div>Высококвалифицированный персонал нашей компании, демонтирует и утилизирует все совершенно бесплатно.<br><a href="https://zabery365.ru/vyvoz-metallicheskih-dverey">Подробнее ...</a></div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <div>
+                        <div>
+                            <h3>Вывоз холодильников</h3>
+                            <img src="icon_refrigerator.svg" alt="Refrigerator icon">
+                            <div>Холодильник очень важно грамотно утилизировать. Мы знаем как это сделать. Обращайтесь и забудте о лишних заботах.<br><a href="https://zabery365.ru/vyvoz-holodilnikov">Подробнее ...</a></div>
+                        </div>
+                        <div>
+                            <h3>Вывоз стиральных машин</h3>
+                            <img src="icon_washingmachine.svg" alt="Washing machine icon">
+                            <div>Стиральная машина очень не удобная, чтобы поднять самому. Наша команда решит все проблемы за Вас.<br><a href="https://zabery365.ru/vyvoz-stiralnyh-mashin">Подробнее ...</a></div>
+                        </div>
+                        <div>
+                            <h3>Вывоз металлоконструкций</h3>
+                            <img src="icon_structure.svg" alt="Metal structure icon">
+                            <div>Разбирать металлоконструкции сложная работа для настоящих профессионалов. Нужно быть действительно выносливыми и иметь специальные инструменты для демонтажа.<br><a href="https://zabery365.ru/besplatnyy-demontazh-metallokonstrukciy-s-vyvozom-na-utilizaciyu-spb-i-lenoblast">Подробнее ...</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <h2>Платный вывоз</h2>
+                <div class="divide"></div>
+                <div class="description">Услуга включает в себя подачу транспорта, спуск, погрузку, транспортировку, разгрузку, подъем.</div>
+                <div class="service">
+                    <div>
+                        <div>
+                            <h3>Вывоз мебели</h3>
+                            <img src="icon_furniture.svg" alt="Furniture icon">
+                            <div>Сервис предоставляет полный комплекс услуг по утилизации старой мебели, квалифицированными специалистами.<br><a href="https://zabery365.ru/content/vyvoz-staroy-mebeli-v-spb">Подробнее ...</a></div>
+                         </div>
+                        <div>
+                            <h3>Вывоз строительного мусора</h3>
+                            <img src="icon_build.svg" alt="Build icon">
+                            <div>Мы приедем и утилизируем стоительный мусор за вас. Наши специалисты возьмут всю работу на себя.<br><a href="https://zabery365.ru/content/vyvoz-stroitelnogo-musora-spb-i-leningradskaya-oblast">Подробнее ...</a></div>
+                        </div>
+                        <div>
+                            <h3>Вывоз пианино</h3>
+                            <img src="icon_piano.svg" alt="Piano icon">
+                            <div>Фортепьяно очень тяжелый и крупный предмет, в его утилизации нужно быть предельно аккуратным, как наши грузчики.<br><a href="https://zabery365.ru/vyvoz-pianino-v-sankt-peterburge-i-oblasti">Подробнее ...</a></div>
+                        </div>
+                    </div>
+                <div class="divide"></div>
+                <div>
+                    <div>
+                        <h3>Квартирный переезд</h3>
+                        <img src="icon_transport.svg" alt="Transport icon">
+                        <div>Профессионально и быстро доставим ваши товары на новый адрес.<br><a href="https://zabery365.ru/content/pereezd-po-sankt-peterburgu-i-len-oblasti">Подробнее ...</a></div>
+                    </div>
+                    <div>
+                        <h3>Дачный переезд</h3>
+                        <img src="icon_villagetransport.svg" alt="Village transport icon">
+                        <div>За городом все хотят расслабиться и побыстрее забыть о проблемах. Доверьте это нашим профессионалам.<br><a href="https://zabery365.ru/dacha-moving">Подробнее ...</a></div>
+                    </div>
+                    <div>
+                        <h3>Перевозка грузов</h3>
+                        <img src="icon_truck.svg" alt="Truck icon">
+                        <div>Когда нужно доставить груз, важно ничего не повредить. Наши обученные работники профессионально справятся с этой задачей.<br><a href="https://zabery365.ru/perevozka-gruzov-na-bolshie-rasstoyaniya-iz-pitera">Подробнее ...</a></div>
+                    </div>
+                </div>
+                <div class="divide"></div>
+                <div>
+                    <div>
+                        <h3>Перевозка строительных материалов</h3>
+                        <img src="icon_buildertruck.svg" alt="Builder truck icon">
+                        <div>Стройка это очень важное дело, что требует ответственного подхода во всех процессах. Положитесь на нас.<br><a href="https://zabery365.ru/content/perevozka-stroy-materialov-po-sankt-peterburgu-i-len-oblasti">Подробнее ...</a></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="about">
+                <h2>Вывоз мусора в Санкт-Петербурге</h2>
+                <div>
+                    <div>
+                        <h2>Заберу 365</h2>Компания из Санкт-Петербурга которая занимается утилизацией профессионально. С собственным парком специальной техники и квалифицированной командой профессионалов. Партнерские отношения с крупнейшими компаниями создают крупную систему, что может решить большую часть проблем экологии.
+                    </div>
+                    <div class="divide"></div>
+                    <div>
+                        <h2>Помощь</h2>Многие вещи занимают наше лишнее время и нам приходиться загружать себя лишними проблемами. Мы помогаем людям упростить жизнь и сохранить свое время. Чтобы решить Вашу проблему у нас есть все необходимое, чтобы сделать это быстро и качественно.
+                    </div>
+                    <div class="divide"></div>
+                    <div>
+                        <h2>Экология</h2>Мусор занимает большую часть глобальных проблем. Качественная его утилизация позволяет сделать мир чуточку чище. Решение проблемы нашей компанией дают вам возможность показать ответственность за то, что происходит в мире и вокруг Вас.
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <h2>Отзывы</h2>
+                <div>
+                    <img src="user.png" alt="User 1">
+                    <div>
+                        <div>Отличное взаимодействие с клиентом. Ответственный вывоз мусора от компании. Спасибо!</div>
+                        <div>13.09.2022 Rohh Thone</div>
+                    </div>
+                </div>
+                <div class="divide"></div>
+                <div>
+                    <img src="user2.png" alt="User 2">
+                    <div>
+                        <div>Спасибо за помощь. Хорошо когда есть такие фирмы. Вывозили старый диван. Позвонили, и на следующий день вывезли. Оперативно, аккуратно, не дорого вывезли мусор.</div>
+                        <div>28.07.2018 Ольга Питерская</div>
+                    </div>
+                </div>
+                <div class="divide"></div>
+                <div>
+                    <img src="user3.png" alt="User 3">
+                    <div>
+                        <div>Огромное спасибо за помощь!Быстро,без лишних слов и совсем недорого.</div>
+                        <div>28.06.2018 Наталья Смирнова</div>
+                    </div>
+                </div>
+                <div class="divide"></div>
+                <div><a href="https://zabery365.ru/reviews">Больше отзывов ...</a></div>
+            </div>
+            <div class="faq">
+                <h2>FAQ</h2>
+                <div>
+                    <h3>Как оформить вывоз мусора?</h3>Оформить заявку на вывоз мусора можно позвонив по телефону +7 812 993 01 63
+                </div>
+                <div>
+                    <h3>Какой мусор лучше не выбрасывать?</h3>Обычный мусоропровод предназначен лишь для каких то бытовых отходов.  В некоторых районах Санкт-Петербурга оборудованы специальные контейнеры для сбора раздельного мусора, но чтобы в этом всем разобраться нужно много времени. Доверьте эту работу профессионалам, кто занимается этим уже много времени.
+                </div>
+                <div>
+                    <h3>Куда вывозят мусор?</h3>В зависимости от вида и класса опасности мусор отвозят или на мусоросортировочный завод, полигон или в сортировочный центр к партнерам компании «Заберу365»
+                </div>
+            </div>
+        </div>
+        <footer class="desktop">
+            <div>
+                <a href="tel:+78129930163">+7 812 993 01 63</a>
+                <div>Искровский пр., 19, корп. 1, Санкт-Петербург, 193168</div>
+                <div><span>© 2022 Заберу365</span><a href="https://zabery365.ru/sitemap/">Карта сайта</a><a href="https://vk.com/zabery365"><img src="vk.svg" alt="vk logo"></a><a href="https://yandex.ru/maps/org/zaberu_365_vyvoz_i_utilizatsiya_musora/186892885468/"><img src="ya.svg" alt="Yandex logo"></a><a href="https://www.google.com/maps/place/%D0%97%D0%B0%D0%B1%D0%B5%D1%80%D1%83365,+%D0%98%D1%81%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80.,+19,+%D0%BA%D0%BE%D1%80%D0%BF.+1,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+193168/@59.904126,30.467466,15z/data=!4m5!3m4!1s0x46962f6d49746949:0x8c114e3185aca5f9!8m2!3d59.904126!4d30.467466"><img src="goo.svg" alt="Google logo"></a></div>
+            </div>
+            
+        </footer>
+        <div class="♥1"><span><a href="https://rohhthone.com/privacy" style="padding-right:12pt">privacy</a><a href="https://rohhthone.com/">by Rohh Thone</a></span></div>
+    </body>
 </html>
